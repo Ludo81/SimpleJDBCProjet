@@ -78,6 +78,8 @@ public class DAOTest {
 	 * @throws simplejdbc.DAOException
 	 */
 	@Test @Ignore // Ce test est désactivé, pourquoi ?
+        //Ce test est ignoré car lors de son lancement, le client sera supprimé
+        //et le reste des tests ne fonctionneront plus à cause du client manquant
 	public void testDeleteCustomerWithoutOrder () throws DAOException {
 		int id = 25; // Le client 25 n'a pas de bon de commande
 		assertEquals(1, myDAO.deleteCustomer(id));
